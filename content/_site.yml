@@ -7,41 +7,58 @@ exclude: ["script", "data", "rmd_child",
           "DESCRIPTION", "CHANGELOG.md", "README.md", "LICENSE"]
 navbar:
   right:
-    - text: "Summary (BO)"
-      href: bo_summary.html
-    - text: "Variables (BO)"
+    - text: "Profile Summary"
+      menu:
+        - text: "Summary (BO)"
+          href: bo_summary.html
+        - text: "Summary (GL)"
+          href: bo_gl_summary.html
+        - text: "Summary (CORA)"
+          href: bo_cora_summary.html
+    - text: "Pressure"
       menu:
         - text: "Pres (BO)"
           href: bo_pres.html
-        - text: "Temp (BO)"
-          href: bo_temp.html
-        - text: "Psal (BO)"
-          href: bo_psal.html
-    - text: "QC Flags (BO)"
-      menu:
-        - text: "Pres QC (BO)"
-          href: bo_pres_qc.html
-        - text: "Temp QC (BO)"
-          href: bo_temp_qc.html
-        - text: "Psal QC (BO)"
-          href: bo_psal_qc.html
-    - text: "Summary (GL)"
-      href: bo_gl_summary.html
-    - text: "Variables (GL)"
-      menu:
         - text: "Pres (GL)"
           href: bo_gl_pres.html
-        - text: "Temp (GL)"
-          href: bo_gl_temp.html
-        - text: "Psal (GL)"
-          href: bo_gl_psal.html
-    - text: "QC Flags (GL)"
-      menu:
+        - text: "Pres (CORA)"
+          href: bo_cora_pres.html
+        - text: "---"
+        - text: "Pres QC (BO)"
+          href: bo_pres_qc.html
         - text: "Pres QC (GL)"
           href: bo_gl_pres_qc.html
+        - text: "Pres QC (CORA)"
+          href: bo_cora_pres_qc.html
+    - text: "Temperature"
+      menu:
+        - text: "Temp (BO)"
+          href: bo_temp.html
+        - text: "Temp (GL)"
+          href: bo_gl_temp.html
+        - text: "Temp (CORA)"
+          href: bo_cora_temp.html
+        - text: "---"
+        - text: "Temp QC (BO)"
+          href: bo_temp_qc.html
         - text: "Temp QC (GL)"
           href: bo_gl_temp_qc.html
+        - text: "Temp QC (CORA)"
+          href: bo_cora_temp_qc.html
+    - text: "Salinity"
+      menu:
+        - text: "Psal (BO)"
+          href: bo_psal.html
+        - text: "Psal (GL)"
+          href: bo_gl_psal.html
+        - text: "Psal (CORA)"
+          href: bo_cora_psal.html
+        - text: "---"
+        - text: "Psal QC (BO)"
+          href: bo_psal_qc.html
         - text: "Psal QC (GL)"
           href: bo_gl_psal_qc.html
+        - text: "Psal QC (CORA)"
+          href: bo_cora_psal_qc.html
 
 output: distill::distill_article

@@ -6,7 +6,7 @@ netcdf_doi <- "https://doi.org/10.48670/moi-00032"
 region <- "Baltic Sea"
 region_code1 <- "BO"
 region_code2 <- "GL"
-parquet <- "netcdf_nrt_bo_gl.parquet"
+parquet <- "netcdf_nrt_bo_gl_2_summary.parquet"
 parquet_url <- file.path(release_url, parquet)
 df_name <- "df_bo_gl"
 df_filtered_name <- "df_bo_gl_filtered"
@@ -60,7 +60,7 @@ count1_3 <- "200"
 count2_1 <- "1"
 count2_2 <- "1"
 count3_1 <- "2"
-count3_2 <- "2"
+count3_2 <- "10"
 count4_1 <- "50"
 count4_2 <- "200"
 count5 <- "300"
@@ -79,34 +79,6 @@ filer_locations <- function(df) {
 
 exclude_locations <- function(df) {
   exclude_locations_common(df, r_excl_lon_bl, r_excl_lat_bl, r_excl_lon_tr, r_excl_lat_tr)
-}
-
-get_unique_profile_no <- function(df) {
-  get_unique_profile_no_common(df, longitude, latitude)
-}
-
-update_profile_no <- function(df, df_profiles) {
-  update_profile_no_common(df, df_profiles, longitude, latitude, "longitude", "latitude")
-}
-
-find_duplicates_within_platforms <- function(df) {
-  find_duplicates_within_platforms_common(df, longitude, latitude)
-}
-
-find_duplicates_across_platforms <- function(df) {
-  find_duplicates_across_platforms_common(df, longitude, latitude)
-}
-
-summarise_df_dup_within <- function(df_orig, df_dup) {
-  summarise_df_dup_within_common(df_orig, df_dup, longitude, latitude)
-}
-
-summarise_df_dup_across <- function(df_orig, df_dup) {
-  summarise_df_dup_across_common(df_orig, df_dup, longitude, latitude)
-}
-
-remove_duplicates_within_platforms <- function(df_orig, df_dup_summary) {
-  remove_duplicates_within_platforms_common(df_orig, df_dup_summary)
 }
 
 ```

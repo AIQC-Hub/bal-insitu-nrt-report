@@ -41,10 +41,6 @@ p_loc_filter2 <- summary_table_filtered2 %>%
 print(plot_grid(p_loc_original,
                 plot_grid(p_loc_filter1, p_loc_filter2, nrow = 1), nrow = 2))
 
-rm(p_loc_original)
-rm(p_loc_filter1)
-rm(p_loc_filter2)
-
 ```
 
 ### Counts of the original data
@@ -71,8 +67,5 @@ rm(p_loc_filter2)
 if (!file.exists(df_filtered_cache_name)) {
   saveRDS({{df_filtered}}, df_filtered_cache_name)
 }
-
-rm({{df}})
-rm(p_loc_filter1)
 
 ```

@@ -34,9 +34,6 @@ p_loc_filter1 <- summary_table_filtered1 %>%
 
 print(plot_grid(p_loc_original, p_loc_filter1, nrow = 2))
 
-rm(p_loc_original)
-rm(p_loc_filter1)
-
 ```
 
 ### Counts of the original data
@@ -52,7 +49,5 @@ rm(p_loc_filter1)
  - **Number of profiles**: `r formatC(sum(summary_table_filtered1_2$profile_count), big.mark=",")`
 
 ```{r, t_summary_loc_filter3, echo = FALSE, message = FALSE, warning = FALSE}
-
-rm({{df}})
 
 ```
