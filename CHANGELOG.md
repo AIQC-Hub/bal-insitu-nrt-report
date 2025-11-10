@@ -5,7 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-## [0.2.0] - 2025-11-10
+## [0.2.2] - 2025-11-10
+### Fixed
+- Input data path for CORA
+
+## [0.2.1] - 2025-11-10
 ### Added
 - All pages for CORA
 

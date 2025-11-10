@@ -1,6 +1,6 @@
 Package: bal-insitu-nrt-report
 Title: Baltic Sea In Situ NRT Summary Report
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
 Description: R Markdown source for the in situ NRT summary report.\
 License: MIT
