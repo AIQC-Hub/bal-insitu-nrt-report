@@ -1,15 +1,38 @@
 ---
-title: "Baltic Sea In Situ NRT Summary Report"
+title: "Baltic Sea In Situ Observations"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Welcome to the site. Here, we provide a collection of resources and summary reports containing statistics and other relevant information about the datasets.
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
 ```
 
+## Contents
+
+1. Profile Summary
+    - [Profile Summary (BO)](./bo_summary.html)
+    - [Profile Summary (GL)](./bo_gl_summary.html)
+    - [Profile Summary (CORA)](./bo_cora_summary.html)
+1. Pressure
+    - [Pressure (BO)](./bo_pres.html)
+    - [Pressure (GL)](./bo_gl_pres.html)
+    - [Pressure (CORA)](./bo_cora_pres.html)
+    - [Pressure QC (BO)](./bo_pres_qc.html)
+    - [Pressure QC (GL)](./bo_gl_pres_qc.html)
+    - [Pressure QC (CORA)](./bo_cora_pres_qc.html)
+1. Temperature
+    - [Temperature (BO)](./bo_temp.html)
+    - [Temperature (GL)](./bo_gl_temp.html)
+    - [Temperature (CORA)](./bo_cora_temp.html)
+    - [Temperature QC (BO)](./bo_temp_qc.html)
+    - [Temperature QC (GL)](./bo_gl_temp_qc.html)
+    - [Temperature QC (CORA)](./bo_cora_temp_qc.html)
+1. Salinity
+    - [Salinity (BO)](./bo_psal.html)
+    - [Salinity (GL)](./bo_gl_psal.html)
+    - [Salinity (CORA)](./bo_cora_psal.html)
+    - [Salinity QC (BO)](./bo_psal_qc.html)
+    - [Salinity QC (GL)](./bo_gl_psal_qc.html)
+    - [Salinity QC (CORA)](./bo_cora_psal_qc.html)
