@@ -26,6 +26,6 @@ Three datasets were used to generate the reports:
 
 ### CORA Dataset
 
-- **Dataset ID**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001/description)  
+- **Dataset ID**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)  
 - **Dataset Name**: CORA  
 - **Folder**: baltic

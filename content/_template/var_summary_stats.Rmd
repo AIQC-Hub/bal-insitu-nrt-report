@@ -121,4 +121,3 @@ create_dt_summary_tab(summary_table_var1 %>% format_var_summary_1("{{var_label}}
 
 :::
 :::
-
