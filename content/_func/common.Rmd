@@ -25,6 +25,7 @@ t_v_distributions_month <- file.path(template_path, "var_distribution_month.Rmd"
 t_qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
 t_qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
 t_qc_distributions <- file.path(template_path, "qc_distribution.Rmd")
+t_qc_qc4_proportion <- file.path(template_path, "qc_qc4_proportion.Rmd")
 t_s_basic_info <- file.path(template_path, "summary_basic_info.Rmd")
 t_s_location_filtering <- file.path(template_path, "summary_location_filtering.Rmd")
 t_s_location_filtering2 <- file.path(template_path, "summary_location_filtering2.Rmd")

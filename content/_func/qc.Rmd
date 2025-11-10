@@ -78,6 +78,29 @@ qc_summary_time <- function(df, var) {
     select(where(~ !all(.x == 0)))
 }
 
+qc4_proportion <- function(df, var_x) {
+  col_count <- sym(paste0(var_x, "_count"))
+  col_qc4 <- sym(paste0(var_x, "_qc_4"))
+
+  df %>%
+    select(platform_code,
+           profile_timestamp,
+           profile_no2,
+           n = !!col_count,
+           qc4_x = !!col_qc4) %>%
+    mutate(qc4_prop = qc4_x / n)
+}
+
+create_qc4_density <- function(df, main_title) {
+  ggplot(df, aes(x=qc4_prop)) +
+    geom_density(alpha=0.25, size = 0.25)  +
+    labs(x = "proportion of QC 4",
+         y = "density") +
+    theme_pubr(base_size = 12) +
+    ggtitle(main_title) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+}
+
 format_qc_summary_year <- function(df) {
   df %>%
     rename(`Year` = x)
