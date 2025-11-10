@@ -6,10 +6,9 @@ summary_loc_table <- netcdf_loc_summary(summary_table_netcdf2)
 
 ```
 
- - **Number of observations**: `r formatC(nrow({{df}}), big.mark=",")`
  - **Number of platform**: `r formatC(nrow(summary_table_netcdf2), big.mark=",")`
  - **Number of profiles**: `r formatC(sum(summary_table_netcdf2$profile_count), big.mark=",")`
-
+ - **Number of observations**: `r formatC(sum(summary_table_netcdf2$obs_count), big.mark=",")`
 
 ### Summary statistics by profiles
 

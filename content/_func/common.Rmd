@@ -55,12 +55,14 @@ na_summary <- function(df, var) {
   non_na_col <- sym(paste0(var, "_non_na_count"))
 
   df_obs <- df %>%
-    summarise(obs_tot = sum(!!count_col), obs_non_na = sum(!!non_na_col))
+    summarise(obs_tot = sum(!!count_col), obs_non_na = sum(!!non_na_col),
+              .groups = "drop")
 
   df_profs <- df %>%
     summarise(
       profs_tot = n(),
-      profs_non_na = sum(if_else(!!na_col > 0, 0, 1))
+      profs_non_na = sum(if_else(!!na_col > 0, 0, 1)),
+      .groups = "drop"
     )
 
   df_pfs <- df %>%
@@ -68,7 +70,8 @@ na_summary <- function(df, var) {
     summarise(pfs_non_na = sum(if_else(!!na_col > 0, 0, 1)), .groups = "drop") %>%
     summarise(
       pfs_tot = n(),
-      pfs_non_na = sum(pfs_non_na == n())
+      pfs_non_na = sum(pfs_non_na == n()),
+      .groups = "drop"
     )
 
   tibble(
