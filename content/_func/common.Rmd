@@ -12,13 +12,16 @@
 
 # Path
 rsc_dir <- "../../data"
-release_url <- "https://github.com/AIQC-Hub/bal-insitu-nrt-report/releases/download/v0.1.0"
+rsc_dir2 <- "../data"
+release_url <- "https://github.com/AIQC-Hub/bal-insitu-nrt-report/releases/download/v0.2.0"
 
 # Templates
 template_path <- "./_template"
 t_v_basic_info <- file.path(template_path, "var_basic_info.Rmd")
 t_v_summary_stats <- file.path(template_path, "var_summary_stats.Rmd")
 t_v_distributions <- file.path(template_path, "var_distribution.Rmd")
+t_v_distributions_year <- file.path(template_path, "var_distribution_year.Rmd")
+t_v_distributions_month <- file.path(template_path, "var_distribution_month.Rmd")
 t_qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
 t_qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
 t_qc_distributions <- file.path(template_path, "qc_distribution.Rmd")

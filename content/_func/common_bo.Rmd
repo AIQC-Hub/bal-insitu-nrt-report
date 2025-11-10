@@ -13,7 +13,7 @@ df_filtered_name <- NULL
 
 # Path
 #rsc_dir <- "../../data/nrt_bo"
-#rsc_dir <- "../data/nrt_bo"
+#rsc_dir2 <- "../data/nrt_bo"
 df_filtered_cache_name <- NULL
 
 # Data frame
