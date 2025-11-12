@@ -27,7 +27,7 @@ cat(res, sep = '\n')
 
 ## 2. Location Filtering
 ```{r, location_filtering, results = 'asis'}
-src <- knitr::knit_expand(t_s_location_filtering, df=df_name, df_filtered=df_filtered_name)
+src <- knitr::knit_expand(t_s_location_filtering, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
@@ -93,3 +93,7 @@ cat(res, sep = '\n')
 ```
 
 ---
+
+```{r, cleanup, include = FALSE}
+rm(list = ls())
+```

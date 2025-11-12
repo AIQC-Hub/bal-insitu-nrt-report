@@ -5,6 +5,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.2.5] - 2025-11-12
+### Changed
+- Removed cached filtered dataset
+
+### Added
+- Cleaning objects at the end of pages
+
+## [0.2.4] - 2025-11-10
+### Added
+- QC4 fraction section to QC pages
+
+## [0.2.3] - 2025-11-10
+### Added
+- Observation data for QC1 and QC4 flags
+
+### Changed
+- Time distribution page split to two pages
+
 ## [0.2.2] - 2025-11-10
 ### Fixed
 - Input data path for CORA

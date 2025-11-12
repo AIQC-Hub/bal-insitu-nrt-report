@@ -1,7 +1,7 @@
 name: "bal-insitu-nrt-report"
-title: "Baltic Sea In Situ NRT Summary"
+title: "Baltic Sea In Situ Observations"
 description: |
-  Baltic Sea In Situ NRT Summary Report
+  Summary Report of Baltic Sea In Situ Observations
 output_dir: "docs"
 exclude: ["script", "data", "rmd_child",
           "DESCRIPTION", "CHANGELOG.md", "README.md", "LICENSE"]

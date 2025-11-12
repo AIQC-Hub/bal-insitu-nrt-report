@@ -5,10 +5,11 @@ var_summary_1 <- function(df, var_x) {
   col_max <- sym(paste0(var_x, "_max"))
   col_mean <- sym(paste0(var_x, "_mean"))
   col_median <- sym(paste0(var_x, "_median"))
+  col_count <- sym(paste0(var_x, "_count"))
 
   df %>%
     group_by(platform_code) %>%
-    summarise(n = sum(observation_no_count),
+    summarise(n = sum(!!col_count),
               min_x = min(!!col_min),
               median_x = median(!!col_median),
               mean_x = mean(!!col_mean),
@@ -28,12 +29,13 @@ var_summary_2 <- function(df, var_x) {
   col_max <- sym(paste0(var_x, "_max"))
   col_mean <- sym(paste0(var_x, "_mean"))
   col_median <- sym(paste0(var_x, "_median"))
+  col_count <- sym(paste0(var_x, "_count"))
 
   df %>%
     select(platform_code,
            profile_timestamp,
            profile_no2,
-           n = observation_no_count,
+           n = !!col_count,
            min_x = !!col_min,
            median_x = !!col_median,
            mean_x = !!col_mean,

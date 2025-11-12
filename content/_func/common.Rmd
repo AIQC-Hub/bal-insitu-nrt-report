@@ -12,16 +12,20 @@
 
 # Path
 rsc_dir <- "../../data"
-release_url <- "https://github.com/AIQC-Hub/bal-insitu-nrt-report/releases/download/v0.1.0"
+rsc_dir2 <- "../data"
+release_url <- "https://github.com/AIQC-Hub/bal-insitu-nrt-report/releases/download/v0.2.0"
 
 # Templates
 template_path <- "./_template"
 t_v_basic_info <- file.path(template_path, "var_basic_info.Rmd")
 t_v_summary_stats <- file.path(template_path, "var_summary_stats.Rmd")
 t_v_distributions <- file.path(template_path, "var_distribution.Rmd")
+t_v_distributions_year <- file.path(template_path, "var_distribution_year.Rmd")
+t_v_distributions_month <- file.path(template_path, "var_distribution_month.Rmd")
 t_qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
 t_qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
 t_qc_distributions <- file.path(template_path, "qc_distribution.Rmd")
+t_qc_qc4_proportion <- file.path(template_path, "qc_qc4_proportion.Rmd")
 t_s_basic_info <- file.path(template_path, "summary_basic_info.Rmd")
 t_s_location_filtering <- file.path(template_path, "summary_location_filtering.Rmd")
 t_s_location_filtering2 <- file.path(template_path, "summary_location_filtering2.Rmd")
@@ -34,6 +38,7 @@ t_s_duplicate_across <- file.path(template_path, "summary_duplicate_across.Rmd")
 t_s_duplicate_across_details <- file.path(template_path, "summary_duplicate_across_details.Rmd")
 t_s_observation_counts <- file.path(template_path, "summary_observation_counts.Rmd")
 t_location_filtering <- file.path(template_path, "location_filtering.Rmd")
+t_load_qc_summary <- file.path(template_path, "load_qc_summary.Rmd")
 
 # Kable wrappers
 kbl_table <- function(x) {
@@ -55,20 +60,25 @@ na_summary <- function(df, var) {
   non_na_col <- sym(paste0(var, "_non_na_count"))
 
   df_obs <- df %>%
-    summarise(obs_tot = sum(!!count_col), obs_non_na = sum(!!non_na_col))
+    summarise(obs_tot = sum(!!count_col), obs_non_na = sum(!!non_na_col),
+              .groups = "drop")
 
   df_profs <- df %>%
     summarise(
       profs_tot = n(),
-      profs_non_na = sum(if_else(!!na_col > 0, 0, 1))
+      profs_non_na = sum(if_else(!!na_col > 0, 0, 1)),
+      .groups = "drop"
     )
 
   df_pfs <- df %>%
     group_by(platform_code) %>%
-    summarise(pfs_non_na = sum(if_else(!!na_col > 0, 0, 1)), .groups = "drop") %>%
+    summarise(pfs_counts = sum(!!count_col),
+              pfs_na_counts = sum(!!na_col),
+              pfs_non_na_counts = sum(!!non_na_col), .groups = "drop") %>%
     summarise(
       pfs_tot = n(),
-      pfs_non_na = sum(pfs_non_na == n())
+      pfs_non_na = sum(pfs_counts == pfs_non_na_counts),
+      .groups = "drop"
     )
 
   tibble(
