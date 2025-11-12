@@ -1,0 +1,9 @@
+```{r, t_location_filtering, echo = FALSE, message = FALSE, warning = FALSE}
+# Data frames
+df_qc1_file_name <- file.path({{rsc_dir}}, gsub(".parquet", "_{{var}}.parquet", {{parquet_qc1}}))
+df_qc4_file_name <- file.path({{rsc_dir}}, gsub(".parquet", "_{{var}}.parquet", {{parquet_qc4}}))
+
+{{df_qc1}} <- read_parquet(df_qc1_file_name)
+{{df_qc4}} <- read_parquet(df_qc4_file_name)
+
+```

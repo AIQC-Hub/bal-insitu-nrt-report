@@ -38,6 +38,7 @@ t_s_duplicate_across <- file.path(template_path, "summary_duplicate_across.Rmd")
 t_s_duplicate_across_details <- file.path(template_path, "summary_duplicate_across_details.Rmd")
 t_s_observation_counts <- file.path(template_path, "summary_observation_counts.Rmd")
 t_location_filtering <- file.path(template_path, "location_filtering.Rmd")
+t_load_qc_summary <- file.path(template_path, "load_qc_summary.Rmd")
 
 # Kable wrappers
 kbl_table <- function(x) {
