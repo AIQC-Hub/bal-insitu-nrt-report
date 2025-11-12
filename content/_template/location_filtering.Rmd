@@ -1,22 +1,5 @@
 ```{r, t_location_filtering, echo = FALSE, message = FALSE, warning = FALSE}
-if (file.exists(df_filtered_cache_name)) {
-  {{df_filtered}} <- readRDS(df_filtered_cache_name)
-} else {
-  {{df_filtered}} <- exclude_locations(filer_locations({{df_name}}))
-  saveRDS({{df_filtered}}, df_filtered_cache_name)
-}
-
-if (file.exists(df_filtered_qc1_cache_name)) {
-  {{df_qc1_filtered}} <- readRDS(df_filtered_qc1_cache_name)
-} else {
-  {{df_qc1_filtered}} <- exclude_locations(filer_locations({{df_qc1_name}}))
-  saveRDS({{df_qc1_filtered}}, df_filtered_qc1_cache_name)
-}
-
-if (file.exists(df_filtered_qc4_cache_name)) {
-  {{df_qc4_filtered}} <- readRDS(df_filtered_qc4_cache_name)
-} else {
-  {{df_qc4_filtered}} <- exclude_locations(filer_locations({{df_qc4_name}}))
-  saveRDS({{df_qc4_filtered}}, df_filtered_qc4_cache_name)
-}
+{{df_filtered}} <- exclude_locations(filer_locations({{df_name}}))
+{{df_qc1_filtered}} <- exclude_locations(filer_locations({{df_qc1_name}}))
+{{df_qc4_filtered}} <- exclude_locations(filer_locations({{df_qc4_name}}))
 ```

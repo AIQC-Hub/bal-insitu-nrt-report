@@ -18,8 +18,8 @@ df_qc1_filtered_name <- NULL
 df_qc4_filtered_name <- NULL
 
 # Path
-rsc_dir <- "../../data/nrt_bo"
-rsc_dir2 <- "../data/nrt_bo"
+#rsc_dir <- "../../data/nrt_bo"
+#rsc_dir2 <- "../data/nrt_bo"
 df_filtered_cache_name <- NULL
 df_filtered_qc1_cache_name <- NULL
 df_filtered_qc4_cache_name <- NULL

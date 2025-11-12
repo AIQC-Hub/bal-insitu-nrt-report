@@ -24,6 +24,11 @@ var_label <- "Temp"
 ```{r, import, include = FALSE, child=file.path(r_func_path, r_funcs)}
 ```
 
+```{r, load_qc_summary, include = FALSE}
+src <- knitr::knit_expand(t_load_qc_summary)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+```
+
 ## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
 src <- knitr::knit_expand(t_v_basic_info)
@@ -60,3 +65,7 @@ cat(res, sep = '\n')
 ```
 
 ---
+
+```{r, cleanup, include = FALSE}
+rm(list = ls())
+```

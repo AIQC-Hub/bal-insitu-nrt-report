@@ -66,3 +66,7 @@ cat(res, sep = '\n')
 
 ---
 
+```{r, cleanup, include = FALSE}
+rm(list = ls())
+```
+
