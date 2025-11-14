@@ -59,7 +59,7 @@ r_excl_lat_tr <- 66
 # Platforms with multiple locations
 platform1 <- "DBBX"
 platform2 <- "Y3CW"
-platform3 <- "VQHF3"
+platform3 <- "EIGB"
 
 # Count variables for observation count density plots
 count1_1 <- "100"
