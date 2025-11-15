@@ -13,13 +13,13 @@ parquet_qc4 <- "netcdf_nrt_bo_2_summary_qc4.parquet"
 df_name <- "df_bo"
 df_qc1_name <- "df_bo_qc1"
 df_qc4_name <- "df_bo_qc4"
-df_filtered_name <- NULL
-df_qc1_filtered_name <- NULL
-df_qc4_filtered_name <- NULL
+df_filtered_name <- "df_bo_filtered"
+df_qc1_filtered_name <- "df_bo_gc1_filtered"
+df_qc4_filtered_name <- "df_bo_qc4_filtered"
 
 # Path
-rsc_dir <- "../../data/nrt_bo"
-rsc_dir2 <- "../data/nrt_bo"
+#rsc_dir <- "../../data/nrt_bo"
+#rsc_dir2 <- "../data/nrt_bo"
 
 # Data frame
 bo_file_name <- file.path(rsc_dir, parquet)
@@ -79,11 +79,11 @@ split_time_spans <- function(df) {
 }
 
 filer_locations <- function(df) {
-  filer_locations_common(df, r_min_lon, r_max_lon, r_min_lat, r_max_lat)
+  df
 }
 
 exclude_locations <- function(df) {
-  exclude_locations_common(df, r_excl_lon_bl, r_excl_lat_bl, r_excl_lon_tr, r_excl_lat_tr)
+  df
 }
 
 ```

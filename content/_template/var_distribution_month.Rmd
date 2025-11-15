@@ -29,9 +29,14 @@ print(p_month_bp)
 ### Good (QC == 1)
 
 ```{r, t_var_dist_month3, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
-p_month_bp_qc1 <- create_var_boxplot(df_month_qc1, "{{var_name}}")
 
-print(p_month_bp_qc1)
+if (nrow(df_month_qc1) > 0) {
+  p_month_bp_qc1 <- create_var_boxplot(df_month_qc1, "{{var_name}}")
+  print(p_month_bp_qc1)
+} else {
+  cat("No data available to display.")
+}
+
 ```
 
 :::

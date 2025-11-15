@@ -33,9 +33,14 @@ print(p_year_bp)
 ### Good (QC == 1)
 
 ```{r, t_var_dist_year3, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
-p_year_bp_qc1 <- create_var_boxplot(df_year_qc1, "{{var_name}}")
 
-print(p_year_bp_qc1)
+if (nrow(df_year_qc1) > 0) {
+  p_year_bp_qc1 <- create_var_boxplot(df_year_qc1, "{{var_name}}")
+  print(p_year_bp_qc1)
+} else {
+  cat("No data available to display.")
+}
+
 ```
 
 :::
