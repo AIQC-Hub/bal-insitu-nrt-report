@@ -1,0 +1,25 @@
+---
+title: "Baltic Sea Summary Report"
+description: |
+  We provide a collection of resources and summary reports containing statistics and other relevant information about the datasets.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Contents
+
+1. Profile Summary
+    - [Profile Summary (BO)](./bo_summary.qmd)
+    - [Profile Summary (CORA)](./bo_cora_summary.qmd)
+1. Temperature
+    - [Temperature (BO)](./bo_temp.qmd)
+    - [Temperature (CORA)](./bo_cora_temp.qmd)
+    - [Temperature QC (BO)](./bo_temp_qc.qmd)
+    - [Temperature QC (CORA)](./bo_cora_temp_qc.qmd)
+1. Salinity
+    - [Salinity (BO)](./bo_psal.qmd)
+    - [Salinity (CORA)](./bo_cora_psal.qmd)
+    - [Salinity QC (BO)](./bo_psal_qc.qmd)
+    - [Salinity QC (CORA)](./bo_cora_psal_qc.qmd)

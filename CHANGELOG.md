@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
+### Added
+- `scripts/build_summaries.R` and `scripts/dump_frames.R`, thin wrappers over
+  `aiqcreport::build_summaries()` and `aiqcreport::fingerprint_frames()`.
+
+### Changed
+- Input data now comes from `ctddump` + `seastamp` instead of the R-built summaries published as
+  release assets. Figures change accordingly and are not reconciled against the previous site:
+  BO 86,266 profiles, CORA 155,326 profiles.
+- The site is now built with **Quarto** instead of Distill. Pages are `.qmd`, `_site.yml` became
+  `content/_quarto.yml`, and xaringanExtra panelsets became Quarto `::: {.panel-tabset}`.
+- The shared functions and templates moved to the **`aiqcreport`** package. This repo now holds
+  only its pages, `_func/common_site.Rmd`, its region files and `_quarto.yml`.
+
+### Removed
+- **All GL pages.** Copernicus does not provide the GL product for the Baltic Sea, and there is no
+  `nrt_bo_gl` dataset in the new data. This drops `bo_gl_*` and `_func/common_bo_gl.Rmd`.
+- Pressure pages and the NRT vs CORA comparison pages.
+- Four sections from every summary page: "Profile level QC flags", "Location Filtering",
+  "Duplicate Profiles Within Platforms" and "Duplicate Profiles Across Platforms".
+
 
 ## [0.4.2] - 2025-11-17
 ### Added
