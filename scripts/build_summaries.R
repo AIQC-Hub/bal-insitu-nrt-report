@@ -10,14 +10,17 @@
 suppressPackageStartupMessages(library(reportlib))
 
 args <- commandArgs(trailingOnly = TRUE)
+repo <- normalizePath(file.path(dirname(sub("^--file=", "",
+          grep("^--file=", commandArgs(FALSE), value = TRUE)[1])), ".."))
+cfg  <- yaml::read_yaml(file.path(repo, "config.yml"))$data
 
 build_summaries(
   datasets = list(
     list(src = "nrt_bo_bo", out = "netcdf_nrt_bo_2_summary"),
     list(src = "cora_bo",   out = "netcdf_cora_bo_2_summary")
   ),
-  src_dir    = Sys.getenv("SEASTAMP_DIR", unset = "/scratch/data/aiqc/seastamp/stamped/depth"),
-  out_dir    = Sys.getenv("SUMMARY_DIR",  unset = "/scratch/data/aiqc/merged"),
+  src_dir    = Sys.getenv("SEASTAMP_DIR", unset = cfg$seastamp_dir),
+  out_dir    = Sys.getenv("SUMMARY_DIR",  unset = cfg$summary_dir),
   chunk_rows = as.numeric(Sys.getenv("CHUNK_ROWS", unset = "15000000")),
   force      = "--force" %in% args,
   only       = setdiff(args, "--force")
