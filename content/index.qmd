@@ -13,6 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 1. Profile Summary
     - [Profile Summary (BO)](./bo_summary.qmd)
     - [Profile Summary (CORA)](./bo_cora_summary.qmd)
+1. Pressure
+    - [Pressure (BO)](./bo_pres.qmd)
+    - [Pressure (CORA)](./bo_cora_pres.qmd)
+    - [Pressure QC (BO)](./bo_pres_qc.qmd)
+    - [Pressure QC (CORA)](./bo_cora_pres_qc.qmd)
 1. Temperature
     - [Temperature (BO)](./bo_temp.qmd)
     - [Temperature (CORA)](./bo_cora_temp.qmd)
