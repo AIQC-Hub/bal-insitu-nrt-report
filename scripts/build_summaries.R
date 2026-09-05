@@ -16,8 +16,8 @@ cfg  <- yaml::read_yaml(file.path(repo, "config.yml"))$data
 
 build_summaries(
   datasets = list(
-    list(src = "nrt_bo_bo", out = "netcdf_nrt_bo_2_summary"),
-    list(src = "cora_bo",   out = "netcdf_cora_bo_2_summary")
+    list(src = "nrt_bo_bo", out = "netcdf_nrt_bo_summary"),
+    list(src = "cora_bo",   out = "netcdf_cora_bo_summary")
   ),
   src_dir    = Sys.getenv("SEASTAMP_DIR", unset = cfg$seastamp_dir),
   out_dir    = Sys.getenv("SUMMARY_DIR",  unset = cfg$summary_dir),
