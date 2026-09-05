@@ -40,6 +40,17 @@ website:
         href: bo_summary.qmd
       - text: Summary (CORA)
         href: bo_cora_summary.qmd
+    - text: Pressure
+      menu:
+      - text: Pres (BO)
+        href: bo_pres.qmd
+      - text: Pres (CORA)
+        href: bo_cora_pres.qmd
+      - text: '---'
+      - text: Pres QC (BO)
+        href: bo_pres_qc.qmd
+      - text: Pres QC (CORA)
+        href: bo_cora_pres_qc.qmd
     - text: Temperature
       menu:
       - text: Temp (BO)
